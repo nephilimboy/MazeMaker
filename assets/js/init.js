@@ -28,6 +28,7 @@
     });
     document.getElementById('drawBtn').addEventListener("click", createCanvas, false);
     document.getElementById('downloadVAL').addEventListener("click", downloadVal, false);
+    document.getElementById('drawBorders').addEventListener("click", downloadBorder, false);
 
 
     function createCanvas() {
@@ -96,12 +97,34 @@
         table.onmouseup = disableToggle;
     }
 
+    function downloadBorder(){
+        console.log("here");
+        for (var r = 0, n = table.rows.length; r < n; r++) {
+            for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
+                if (table.rows[r].cells[c].lastChild === null) {
+                        if (r == 0) {
+                            table.rows[0].cells[c].style.backgroundColor = blackColor;
+                        }
+                        else if (r == n - 1) {
+                            table.rows[n - 1].cells[c].style.backgroundColor = blackColor;
+                        }
+                        else if (c == 0) {
+                            table.rows[r].cells[0].style.backgroundColor = blackColor;
+                        }
+                        else if (c == m - 1) {
+                            table.rows[r].cells[m - 1].style.backgroundColor = blackColor;
+                        }
+                }
+
+            }
+        }
+    }
+
     function downloadVal() {
         let content = '';
         console.log(table)
         for (var r = 0, n = table.rows.length; r < n; r++) {
             for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
-                console.log(table.rows[r].cells[c].innerHTML);
                 if (table.rows[r].cells[c].style.backgroundColor === "rgb(0, 0, 0)") {
                     content = content + "(" + r + "," + c + ")=9999999\n";
                 }
