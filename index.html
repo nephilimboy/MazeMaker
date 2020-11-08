@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Dijkstra CD++</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body style="background-color: whitesmoke !important; width: 100% !important;">
+<nav class="light-blue lighten-1" role="navigation" style="width: 100% !important;">
+    <div class="nav-wrapper container" style="width: 100% !important;">
+        <div class="row">
+
+            <div class="col s5">
+                <div class="row">
+                    <div class="col s4">
+                        <label style="color: #f1f1f1;">Height:</label>
+                        <input type="number" id="inputHeight" name="height" min="2" value="2"
+                               style=" width:90px ;background-color: #d0d1d6; border-radius: 9px"/>
+                    </div>
+                    <div class="col s4">
+                        <label style="color: #f1f1f1;">Width:</label>
+                        <input type="number" id="inputWidth" name="width" min="2" value="2"
+                               style=" width:100px ;background-color: #d0d1d6; border-radius: 9px"/>
+                    </div>
+                    <div class="col s4">
+                        <input type="submit" id="drawBtn" value="Draw table" class="btn btn-default"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s2">
+                <div class="row">
+                    <div class="col s4">
+                        <label style="color: #f1f1f1;">Src:</label>
+                        <img src="assets/img/source.png" alt="Source icn" width="15" height="15">
+                    </div>
+                    <div class="col s4">
+                        <label style="color: #f1f1f1;">Dest:</label>
+                        <img src="assets/img/location.png" alt="Source icn" width="15" height="15">
+                    </div>
+                    <div class="col s4">
+                        <label style="color: #f1f1f1;">Wall:</label>
+                        <img src="assets/img/black.jpeg" alt="Source icn" width="15" height="15">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s2">
+                <input type="submit" id="downloadVAL" value="Download .val file" class="btn btn-default"/>
+            </div>
+
+            <div class="col s3">
+                <p style="position:absolute;top:-12px;color: #0c1d60; font-weight: bold">Made by AmirHoseein Ghorab 2020</p>
+            </div>
+
+
+        </div>
+    </div>
+</nav>
+
+<div class="section no-pad-bot" id="index-banner">
+
+
+    <div class="container">
+        <table id="pixelCanvas" cellspacing="0" cellpadding="0"></table>
+        <br/>
+    </div>
+</div>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="assets/js/materialize.js"></script>
+<script src="assets/js/init.js"></script>
+
+</body>
+</html>
