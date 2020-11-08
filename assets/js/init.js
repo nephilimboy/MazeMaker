@@ -15,7 +15,7 @@
 
     let blackColor = "#000000";
 
-    let whiteColor = "#ffffff";
+    let whiteColor = "#F5F5F5";
 
     var isToggling = false;
 
